@@ -1,4 +1,4 @@
-## EdgeGuard: Knowledge-Graph-Centric Threat Intelligence on the Edge
+## EdgeGuard - Graph-Augmented xAI for Threat Intelligence on Edge Infrastructure
 
 ### Overview
 
@@ -17,5 +17,5 @@ Our motivation for participating in the ResilMesh Open Call is to validate these
 - **Kalin Kopanov** – IICT-BAS  
 - **Assoc. Prof. Dr. Andrei Damian** – Ratio1.ai  
 - **Cristian Bleotiu** – Ratio1.ai  
-- **Bogdan Ionescu** – Ratio1.ai  
+- **Petrica Butusina** – Ratio1.ai  
 
