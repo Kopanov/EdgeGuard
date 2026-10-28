@@ -503,21 +503,22 @@ footer.site { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--l
       </div>
 
       <h2>ResilMesh integration</h2>
-      <p class="sub">EdgeGuard exposes several ways to plug into the ResilMesh platform. The remaining items wait on formats agreed with the consortium.</p>
+      <p class="sub">EdgeGuard exposes several ways to plug into the ResilMesh platform. The graph APIs run on Ratio1's production host on its internal interface; public access for a ResilMesh service needs a TLS endpoint and an API key per platform, set up on request. The remaining items wait on formats agreed with the consortium.</p>
       <div class="table-wrap">
         <table>
           <thead><tr><th>Interface</th><th>What it does</th><th>Status</th></tr></thead>
           <tbody>
-            <tr><td><strong>GraphQL API</strong></td><td>Graph queries following ResilMesh ISIM naming conventions</td><td><span class="chip done">Live</span></td></tr>
-            <tr><td><strong>REST API</strong></td><td>Indicator search (defang-tolerant), actor summaries, exports</td><td><span class="chip done">Live</span></td></tr>
-            <tr><td><strong>STIX 2.1 export</strong></td><td>Standard threat-intel bundles for other tools</td><td><span class="chip done">Live</span></td></tr>
-            <tr><td><strong>Wazuh CDB lists</strong></td><td>Indicator lists Wazuh loads natively, filterable by sector, confidence and freshness</td><td><span class="chip done">Live</span></td></tr>
-            <tr><td><strong>Shared Neo4j</strong></td><td>EdgeGuard layer next to ResilMesh's own graph layer</td><td><span class="chip done">Ready</span></td></tr>
+            <tr><td><strong>GraphQL API</strong></td><td>Graph queries following ResilMesh ISIM naming conventions</td><td><span class="chip live">Running · internal</span></td></tr>
+            <tr><td><strong>REST API</strong></td><td>Indicator search (defang-tolerant), actor summaries, exports</td><td><span class="chip live">Running · internal</span></td></tr>
+            <tr><td><strong>STIX 2.1 export</strong></td><td>Standard threat-intel bundles for other tools</td><td><span class="chip live">Running · internal</span></td></tr>
+            <tr><td><strong>Wazuh CDB lists</strong></td><td>Indicator lists Wazuh loads natively, filterable by sector, confidence and freshness</td><td><span class="chip live">Running · internal</span></td></tr>
+            <tr><td><strong>Shared Neo4j</strong></td><td>EdgeGuard layer next to ResilMesh's own graph layer; every node EdgeGuard creates or enriches is marked, and no ResilMesh node is replaced</td><td><span class="chip done">Contract implemented</span></td></tr>
             <tr><td><strong>NATS alert enrichment</strong></td><td>Enrich ResilMesh alerts and publish results back</td><td><span class="chip wait">Implemented · format pending</span></td></tr>
             <tr><td><strong>Asset links</strong></td><td>Connect threat entities to ResilMesh hosts and IPs</td><td><span class="chip">Designed</span></td></tr>
           </tbody>
         </table>
       </div>
+      <p class="sub">In Stage 3 ResilMesh shared the eighteen questions it asks its ISIM graph. EdgeGuard supplies the CVE half of the questions that rank vulnerabilities (severity, exploitation status, CISA KEV listing), and the CVEs they name are loaded into the graph. No joint test with ResilMesh has taken place yet.</p>
 
       <h2>Open science</h2>
       <div class="grid g3">
