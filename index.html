@@ -468,6 +468,25 @@ footer.site { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--l
         </div>
       </div>
 
+      <h2>Ask EdgeGuard from code</h2>
+      <p class="sub">Since 27 October 2026 the <a href="https://playground.edgeguard.org/">analyst playground</a> also has a documented REST API, so partner tools can send the same questions an analyst types.</p>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Endpoints under <code>/api/v1</code></h3>
+          <ul>
+            <li><code>POST /text-to-cypher</code> — the graph query for a question</li>
+            <li><code>POST /ask</code> — a full explained answer, run as a job</li>
+            <li><code>GET /ask/{jobId}</code> — the job's status and answer</li>
+            <li><code>GET /models</code> and <code>GET /openapi.json</code> — served models and the API description</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Access</h3>
+          <p>Each partner gets its own key, issued by Ratio1 or IICT-BAS and sent as a bearer token. A key allows
+            30 requests per minute and one running answer at a time; answers are cached for 30 minutes per key.</p>
+        </div>
+      </div>
+
       <h2>What is in the graph</h2>
       <p class="sub">Breakdown from the 25 October 2026 baseline; headline totals above are from the 26 October baseline.</p>
       <div class="grid g2">
